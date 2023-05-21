@@ -12,9 +12,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Xenia_Canary_Config_Editor
 {
-    public partial class Form1 : Form
+    public partial class MainFrom : Form
     {
-        public Form1()
+        public MainFrom()
         {
             InitializeComponent();
         }
@@ -28,6 +28,7 @@ namespace Xenia_Canary_Config_Editor
         {
             try
             {
+                Text = "Xenia Canary Config Editor v" + System.Windows.Forms.Application.ProductVersion;
                 string text;
                 var fileStream = new FileStream("xenia-canary.config.toml", FileMode.Open, FileAccess.Read);
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
