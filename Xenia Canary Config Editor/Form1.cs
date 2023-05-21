@@ -36,7 +36,6 @@ namespace Xenia_Canary_Config_Editor
                     streamReader.Close();
                 }
                 string[] ConfigData = text.Split('\n');
-                /////////////////////////////////////////////////////////
 
                 string[] APU = ConfigData[1].Split(' ');
                 comboBox1.SelectedIndex = comboBox1.FindString(APU[2].Remove(APU[2].Length - 1).Remove(0, 1));
