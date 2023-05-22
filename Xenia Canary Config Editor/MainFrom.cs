@@ -65,6 +65,7 @@ namespace Xenia_Canary_Config_Editor
                 }
 
                 string[] d3d12_clear_memory_page_state = ConfigData[73].Split(' ');
+                Console.WriteLine(ConfigData[73]);
                 checkBox13.Checked = bool.Parse(d3d12_clear_memory_page_state[2]);
 
                 string[] d3d12_readback_resolve = ConfigData[81].Split(' ');
@@ -171,7 +172,7 @@ namespace Xenia_Canary_Config_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace + " - "+ ex.Message);
                 Close();
             }
         }
@@ -224,7 +225,7 @@ namespace Xenia_Canary_Config_Editor
                         output = output.Replace(fullscreen[0].TrimEnd(), "fullscreen = " + (checkBox3.Checked ? "true" : "false"));
 
                         string[] d3d12_clear_memory_page_state = ConfigData[73].Split('#');
-                        output = output.Replace(d3d12_clear_memory_page_state[0].TrimEnd(), "d3d12_clear_memory_page_state  = " + (checkBox13.Checked ? "true" : "false"));
+                        output = output.Replace(d3d12_clear_memory_page_state[0].TrimEnd(), "d3d12_clear_memory_page_state = " + (checkBox13.Checked ? "true" : "false"));
 
                         string[] d3d12_readback_resolve = ConfigData[81].Split('#');
                         output = output.Replace(d3d12_readback_resolve[0].TrimEnd(), "d3d12_readback_resolve = " + (checkBox14.Checked ? "true" : "false"));
