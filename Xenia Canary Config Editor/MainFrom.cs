@@ -64,6 +64,12 @@ namespace Xenia_Canary_Config_Editor
                         break;
                 }
 
+                string[] d3d12_clear_memory_page_state = ConfigData[73].Split(' ');
+                checkBox13.Checked = bool.Parse(d3d12_clear_memory_page_state[2]);
+
+                string[] d3d12_readback_resolve = ConfigData[81].Split(' ');
+                checkBox14.Checked = bool.Parse(d3d12_readback_resolve[2]);
+
                 string[] fullscreen = ConfigData[88].Split(' ');
                 checkBox3.Checked = bool.Parse(fullscreen[2]);
 
@@ -214,9 +220,14 @@ namespace Xenia_Canary_Config_Editor
                         }
                         output = output.Replace(license_mask[0].TrimEnd(), "license_mask = " + license_mask_value);
 
-
                         string[] fullscreen = ConfigData[88].Split('#');
                         output = output.Replace(fullscreen[0].TrimEnd(), "fullscreen = " + (checkBox3.Checked ? "true" : "false"));
+
+                        string[] d3d12_clear_memory_page_state = ConfigData[73].Split('#');
+                        output = output.Replace(d3d12_clear_memory_page_state[0].TrimEnd(), "d3d12_clear_memory_page_state  = " + (checkBox13.Checked ? "true" : "false"));
+
+                        string[] d3d12_readback_resolve = ConfigData[81].Split('#');
+                        output = output.Replace(d3d12_readback_resolve[0].TrimEnd(), "d3d12_readback_resolve = " + (checkBox14.Checked ? "true" : "false"));
 
                         string[] host_present_from_non_ui_thread = ConfigData[89].Split('#');
                         output = output.Replace(host_present_from_non_ui_thread[0].TrimEnd(), "host_present_from_non_ui_thread = " + (checkBox7.Checked ? "true" : "false"));
