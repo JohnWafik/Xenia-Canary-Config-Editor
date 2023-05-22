@@ -348,13 +348,17 @@ namespace Xenia_Canary_Config_Editor
             comboBox2.SelectedIndex = comboBox2.FindString("any");
             comboBox3.SelectedIndex = comboBox3.FindString("No licenses enabled");
             comboBox4.SelectedIndex = comboBox4.FindString("1280x720 (Default)");
+            comboBox5.SelectedIndex = comboBox5.FindString("none");
+            comboBox6.SelectedIndex = comboBox6.FindString("any");
             checkBox1.Checked = false; checkBox2.Checked = false;
             checkBox3.Checked = false; checkBox4.Checked = true;
             checkBox5.Checked = false; checkBox6.Checked = false;
+            checkBox7.Checked = true; checkBox8.Checked = true;
+            checkBox9.Checked = true; checkBox10.Checked = true;
+            checkBox11.Checked = true; checkBox12.Checked = true;
+            checkBox13.Checked = false; checkBox14.Checked = false;
             textBox1.Text = "64";
             textBox2.Text = "16";
-
-
         }
     }
 }
