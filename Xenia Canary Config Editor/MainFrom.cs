@@ -67,6 +67,9 @@ namespace Xenia_Canary_Config_Editor
                 string[] fullscreen = ConfigData[88].Split(' ');
                 checkBox3.Checked = bool.Parse(fullscreen[2]);
 
+                string[] host_present_from_non_ui_thread = ConfigData[89].Split(' ');
+                checkBox7.Checked = bool.Parse(host_present_from_non_ui_thread[2]);
+
                 string[] internal_display_resolution = ConfigData[90].Split(' ');
                 switch (internal_display_resolution[2])
                 {
@@ -122,6 +125,13 @@ namespace Xenia_Canary_Config_Editor
                         comboBox4.SelectedIndex = comboBox4.FindString("1920x1080");
                         break;
                 }
+
+                string[] postprocess_antialiasing = ConfigData[108].Split(' ');
+                comboBox5.SelectedIndex = comboBox5.FindString(postprocess_antialiasing[2].Remove(postprocess_antialiasing[2].Length - 1).Remove(0, 1));
+
+                string[] postprocess_dither = ConfigData[118].Split(' ');
+                checkBox8.Checked = bool.Parse(postprocess_dither[2]);
+
                 string[] GPU = ConfigData[208].Split(' ');
                 comboBox2.SelectedIndex = comboBox2.FindString(GPU[2].Remove(GPU[2].Length - 1).Remove(0, 1));
 
@@ -130,6 +140,21 @@ namespace Xenia_Canary_Config_Editor
 
                 string[] vsync_interval = ConfigData[268].Split(' ');
                 textBox2.Text = vsync_interval[2];
+
+                string[] apply_patches = ConfigData[273].Split(' ');
+                checkBox9.Checked = bool.Parse(apply_patches[2]);
+
+                string[] controller_hotkeys = ConfigData[274].Split(' ');
+                checkBox10.Checked = bool.Parse(controller_hotkeys[2]);
+
+                string[] guide_button = ConfigData[284].Split(' ');
+                checkBox11.Checked = bool.Parse(guide_button[2]);
+
+                string[] hid = ConfigData[285].Split(' ');
+                comboBox6.SelectedIndex = comboBox6.FindString(hid[2].Remove(hid[2].Length - 1).Remove(0, 1));
+
+                string[] vibration = ConfigData[286].Split(' ');
+                checkBox12.Checked = bool.Parse(vibration[2]);
 
                 string[] mount_cache = ConfigData[356].Split(' ');
                 checkBox5.Checked = bool.Parse(mount_cache[2]);
@@ -193,6 +218,9 @@ namespace Xenia_Canary_Config_Editor
                         string[] fullscreen = ConfigData[88].Split('#');
                         output = output.Replace(fullscreen[0].TrimEnd(), "fullscreen = " + (checkBox3.Checked ? "true" : "false"));
 
+                        string[] host_present_from_non_ui_thread = ConfigData[89].Split('#');
+                        output = output.Replace(host_present_from_non_ui_thread[0].TrimEnd(), "host_present_from_non_ui_thread = " + (checkBox7.Checked ? "true" : "false"));
+
                         string[] internal_display_resolution = ConfigData[90].Split('#');
                         string internal_display_resolution_value = "0";
                         switch (comboBox4.Text)
@@ -251,6 +279,12 @@ namespace Xenia_Canary_Config_Editor
                         }
                         output = output.Replace(internal_display_resolution[0].TrimEnd(), "internal_display_resolution = " + internal_display_resolution_value);
 
+                        string[] postprocess_antialiasing = ConfigData[108].Split('#');
+                        output = output.Replace(postprocess_antialiasing[0].TrimEnd(), "postprocess_antialiasing = \"" + comboBox5.Text + "\"");
+
+                        string[] postprocess_dither = ConfigData[2].Split('#');
+                        output = output.Replace(postprocess_dither[0].TrimEnd(), "postprocess_dither = " + (checkBox8.Checked ? "true" : "false"));
+
                         string[] GPU = ConfigData[208].Split('#');
                         output = output.Replace(GPU[0].TrimEnd(), "gpu = \"" + comboBox2.Text + "\"");
 
@@ -259,6 +293,21 @@ namespace Xenia_Canary_Config_Editor
 
                         string[] vsync_interval = ConfigData[268].Split('#');
                         output = output.Replace(vsync_interval[0].TrimEnd(), "vsync_interval = " + textBox2.Text);
+
+                        string[] apply_patches = ConfigData[273].Split('#');
+                        output = output.Replace(apply_patches[0].TrimEnd(), "apply_patches = " + (checkBox9.Checked ? "true" : "false"));
+
+                        string[] controller_hotkeys = ConfigData[274].Split('#');
+                        output = output.Replace(controller_hotkeys[0].TrimEnd(), "controller_hotkeys = " + (checkBox10.Checked ? "true" : "false"));
+
+                        string[] guide_button = ConfigData[284].Split('#');
+                        output = output.Replace(guide_button[0].TrimEnd(), "guide_button = " + (checkBox11.Checked ? "true" : "false"));
+
+                        string[] hid = ConfigData[285].Split('#');
+                        output = output.Replace(hid[0].TrimEnd(), "hid = \"" + comboBox6.Text + "\"");
+
+                        string[] vibration = ConfigData[286].Split('#');
+                        output = output.Replace(vibration[0].TrimEnd(), "vibration = " + (checkBox12.Checked ? "true" : "false"));
 
                         string[] mount_cache = ConfigData[356].Split('#');
                         output = output.Replace(mount_cache[0].TrimEnd(), "mount_cache = " + (checkBox5.Checked ? "true" : "false"));
