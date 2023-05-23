@@ -34,7 +34,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -62,6 +61,23 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.checkBox26 = new System.Windows.Forms.CheckBox();
+            this.checkBox25 = new System.Windows.Forms.CheckBox();
+            this.checkBox24 = new System.Windows.Forms.CheckBox();
+            this.checkBox23 = new System.Windows.Forms.CheckBox();
+            this.checkBox22 = new System.Windows.Forms.CheckBox();
+            this.checkBox21 = new System.Windows.Forms.CheckBox();
+            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,14 +85,13 @@
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +106,6 @@
             this.tableLayoutPanel1.Controls.Add(this.button1, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -139,24 +153,12 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 13);
+            this.label1.Size = new System.Drawing.Size(523, 75);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hover on items to show information.";
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(298, 327);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 24);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Default";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label1.Text = "Hover on items to show information.\n\nNote:- \nInformation is loaded from configuration file and may be incomplete.";
             // 
             // tabControl1
             // 
@@ -164,6 +166,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
@@ -196,6 +199,8 @@
             this.checkBox9.TabIndex = 28;
             this.checkBox9.Text = "Apply Patches";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox9.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox6
             // 
@@ -206,6 +211,8 @@
             this.checkBox6.TabIndex = 27;
             this.checkBox6.Text = "Mount Scratch";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox6.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox5
             // 
@@ -216,6 +223,8 @@
             this.checkBox5.TabIndex = 26;
             this.checkBox5.Text = "Mount Cache";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox5.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // comboBox3
             // 
@@ -229,6 +238,8 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(164, 21);
             this.comboBox3.TabIndex = 25;
+            this.comboBox3.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox3.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // label5
             // 
@@ -253,7 +264,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(521, 192);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Audio";
+            this.tabPage2.Text = "APU";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -289,6 +300,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(94, 21);
             this.comboBox1.TabIndex = 10;
+            this.comboBox1.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox1.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox1
             // 
@@ -299,6 +312,8 @@
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "FFmpeg";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox1.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox2
             // 
@@ -309,6 +324,8 @@
             this.checkBox2.TabIndex = 12;
             this.checkBox2.Text = "Mute";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox2.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // textBox1
             // 
@@ -317,11 +334,11 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(94, 20);
             this.textBox1.TabIndex = 13;
+            this.textBox1.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.textBox1.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.checkBox14);
-            this.tabPage3.Controls.Add(this.checkBox13);
             this.tabPage3.Controls.Add(this.checkBox8);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.comboBox5);
@@ -338,7 +355,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(521, 192);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Video";
+            this.tabPage3.Text = "GPU";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // checkBox8
@@ -350,6 +367,8 @@
             this.checkBox8.TabIndex = 29;
             this.checkBox8.Text = "Postprocess Dither";
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox8.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // label8
             // 
@@ -373,6 +392,8 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(122, 21);
             this.comboBox5.TabIndex = 28;
+            this.comboBox5.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox5.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox7
             // 
@@ -383,6 +404,8 @@
             this.checkBox7.TabIndex = 26;
             this.checkBox7.Text = "Host present from non ui thread";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox7.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // label7
             // 
@@ -401,6 +424,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(45, 20);
             this.textBox2.TabIndex = 25;
+            this.textBox2.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.textBox2.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox4
             // 
@@ -411,6 +436,8 @@
             this.checkBox4.TabIndex = 23;
             this.checkBox4.Text = "Vsync";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox4.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // comboBox4
             // 
@@ -438,6 +465,8 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(122, 21);
             this.comboBox4.TabIndex = 22;
+            this.comboBox4.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox4.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // label6
             // 
@@ -458,6 +487,8 @@
             this.checkBox3.TabIndex = 20;
             this.checkBox3.Text = "Fullscreen";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox3.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // label3
             // 
@@ -482,6 +513,225 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(122, 21);
             this.comboBox2.TabIndex = 19;
+            this.comboBox2.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox2.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.checkBox26);
+            this.tabPage5.Controls.Add(this.checkBox25);
+            this.tabPage5.Controls.Add(this.checkBox24);
+            this.tabPage5.Controls.Add(this.checkBox23);
+            this.tabPage5.Controls.Add(this.checkBox22);
+            this.tabPage5.Controls.Add(this.checkBox21);
+            this.tabPage5.Controls.Add(this.checkBox20);
+            this.tabPage5.Controls.Add(this.checkBox19);
+            this.tabPage5.Controls.Add(this.checkBox18);
+            this.tabPage5.Controls.Add(this.checkBox17);
+            this.tabPage5.Controls.Add(this.checkBox16);
+            this.tabPage5.Controls.Add(this.checkBox15);
+            this.tabPage5.Controls.Add(this.label10);
+            this.tabPage5.Controls.Add(this.comboBox7);
+            this.tabPage5.Controls.Add(this.checkBox14);
+            this.tabPage5.Controls.Add(this.checkBox13);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(521, 192);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "D3D12";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox26
+            // 
+            this.checkBox26.AutoSize = true;
+            this.checkBox26.Location = new System.Drawing.Point(217, 168);
+            this.checkBox26.Name = "checkBox26";
+            this.checkBox26.Size = new System.Drawing.Size(123, 17);
+            this.checkBox26.TabIndex = 49;
+            this.checkBox26.Text = "Tiled shared memory";
+            this.checkBox26.UseVisualStyleBackColor = true;
+            this.checkBox26.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox26.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox25
+            // 
+            this.checkBox25.AutoSize = true;
+            this.checkBox25.Location = new System.Drawing.Point(217, 145);
+            this.checkBox25.Name = "checkBox25";
+            this.checkBox25.Size = new System.Drawing.Size(130, 17);
+            this.checkBox25.TabIndex = 48;
+            this.checkBox25.Text = "Tessellation wireframe";
+            this.checkBox25.UseVisualStyleBackColor = true;
+            this.checkBox25.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox25.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox24
+            // 
+            this.checkBox24.AutoSize = true;
+            this.checkBox24.Location = new System.Drawing.Point(217, 125);
+            this.checkBox24.Name = "checkBox24";
+            this.checkBox24.Size = new System.Drawing.Size(160, 17);
+            this.checkBox24.TabIndex = 47;
+            this.checkBox24.Text = "Submit on primary buffer end";
+            this.checkBox24.UseVisualStyleBackColor = true;
+            this.checkBox24.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox24.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox23
+            // 
+            this.checkBox23.AutoSize = true;
+            this.checkBox23.Location = new System.Drawing.Point(217, 79);
+            this.checkBox23.Name = "checkBox23";
+            this.checkBox23.Size = new System.Drawing.Size(130, 17);
+            this.checkBox23.TabIndex = 46;
+            this.checkBox23.Text = "Readback memexport";
+            this.checkBox23.UseVisualStyleBackColor = true;
+            this.checkBox23.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox23.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox22
+            // 
+            this.checkBox22.AutoSize = true;
+            this.checkBox22.Location = new System.Drawing.Point(217, 56);
+            this.checkBox22.Name = "checkBox22";
+            this.checkBox22.Size = new System.Drawing.Size(175, 17);
+            this.checkBox22.TabIndex = 45;
+            this.checkBox22.Text = "NVAPI use driver heap priorities";
+            this.checkBox22.UseVisualStyleBackColor = true;
+            this.checkBox22.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox22.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox21
+            // 
+            this.checkBox21.AutoSize = true;
+            this.checkBox21.Location = new System.Drawing.Point(217, 33);
+            this.checkBox21.Name = "checkBox21";
+            this.checkBox21.Size = new System.Drawing.Size(132, 17);
+            this.checkBox21.TabIndex = 44;
+            this.checkBox21.Text = "DXBC disasm dxilconv";
+            this.checkBox21.UseVisualStyleBackColor = true;
+            this.checkBox21.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox21.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox20
+            // 
+            this.checkBox20.AutoSize = true;
+            this.checkBox20.Location = new System.Drawing.Point(8, 168);
+            this.checkBox20.Name = "checkBox20";
+            this.checkBox20.Size = new System.Drawing.Size(90, 17);
+            this.checkBox20.TabIndex = 43;
+            this.checkBox20.Text = "DXBC disasm";
+            this.checkBox20.UseVisualStyleBackColor = true;
+            this.checkBox20.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox20.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Location = new System.Drawing.Point(8, 145);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(58, 17);
+            this.checkBox19.TabIndex = 42;
+            this.checkBox19.Text = "Debug";
+            this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox19.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox19.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox18
+            // 
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.Location = new System.Drawing.Point(8, 99);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(109, 17);
+            this.checkBox18.TabIndex = 41;
+            this.checkBox18.Text = "Break on warning";
+            this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox18.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(8, 76);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(93, 17);
+            this.checkBox17.TabIndex = 40;
+            this.checkBox17.Text = "Break on error";
+            this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox17.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox17.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(8, 53);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(65, 17);
+            this.checkBox16.TabIndex = 39;
+            this.checkBox16.Text = "Bindless";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox16.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox15
+            // 
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.Location = new System.Drawing.Point(8, 33);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(203, 17);
+            this.checkBox15.TabIndex = 38;
+            this.checkBox15.Text = "Allow variable refresh rate and tearing";
+            this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox15.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Adapter";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "Physical Adapter",
+            "WARP Software Rendering"});
+            this.comboBox7.Location = new System.Drawing.Point(55, 6);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(163, 21);
+            this.comboBox7.TabIndex = 37;
+            this.comboBox7.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox7.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(217, 102);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(113, 17);
+            this.checkBox14.TabIndex = 35;
+            this.checkBox14.Text = "Readback resolve";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox14.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(8, 122);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(142, 17);
+            this.checkBox13.TabIndex = 34;
+            this.checkBox13.Text = "Clear memory page state";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox13.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // tabPage4
             // 
@@ -496,7 +746,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(521, 192);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Controller";
+            this.tabPage4.Text = "HID";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // checkBox10
@@ -508,6 +758,8 @@
             this.checkBox10.TabIndex = 34;
             this.checkBox10.Text = "Controller Hotkeys";
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox10.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // label9
             // 
@@ -533,6 +785,8 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(122, 21);
             this.comboBox6.TabIndex = 33;
+            this.comboBox6.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox6.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox12
             // 
@@ -543,6 +797,8 @@
             this.checkBox12.TabIndex = 31;
             this.checkBox12.Text = "Vibration";
             this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox12.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // checkBox11
             // 
@@ -553,6 +809,8 @@
             this.checkBox11.TabIndex = 30;
             this.checkBox11.Text = "Guide Button";
             this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.checkBox11.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // pictureBox1
             // 
@@ -563,26 +821,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(8, 133);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(176, 17);
-            this.checkBox13.TabIndex = 30;
-            this.checkBox13.Text = "D3d12 clear memory page state";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(8, 156);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(143, 17);
-            this.checkBox14.TabIndex = 31;
-            this.checkBox14.Text = "D3d12 readback resolve";
-            this.checkBox14.UseVisualStyleBackColor = true;
             // 
             // MainFrom
             // 
@@ -600,7 +838,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -608,6 +845,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -622,7 +861,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -657,8 +895,23 @@
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox checkBox23;
+        private System.Windows.Forms.CheckBox checkBox22;
+        private System.Windows.Forms.CheckBox checkBox21;
+        private System.Windows.Forms.CheckBox checkBox20;
+        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.CheckBox checkBox26;
+        private System.Windows.Forms.CheckBox checkBox25;
+        private System.Windows.Forms.CheckBox checkBox24;
     }
 }
 
