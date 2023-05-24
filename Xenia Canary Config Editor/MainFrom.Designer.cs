@@ -85,6 +85,10 @@
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -114,13 +118,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 354);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 352);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(458, 327);
+            this.button1.Location = new System.Drawing.Point(408, 325);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 24);
             this.button1.TabIndex = 1;
@@ -131,7 +135,7 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(378, 327);
+            this.button2.Location = new System.Drawing.Point(328, 325);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 24);
             this.button2.TabIndex = 2;
@@ -144,9 +148,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 227);
+            this.groupBox1.Location = new System.Drawing.Point(3, 225);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(529, 94);
+            this.groupBox1.Size = new System.Drawing.Size(479, 94);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
@@ -156,9 +160,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(523, 75);
+            this.label1.Size = new System.Drawing.Size(473, 75);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hover on items to show information.\n\nNote:- \nInformation is loaded from configuration file and may be incomplete.";
+            this.label1.Text = "Hover on items to show information.\n\nNote:- \nInformation is loaded from configura" +
+    "tion file and may be incomplete.";
             // 
             // tabControl1
             // 
@@ -172,7 +177,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(529, 218);
+            this.tabControl1.Size = new System.Drawing.Size(479, 216);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -185,7 +190,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(521, 192);
+            this.tabPage1.Size = new System.Drawing.Size(471, 190);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -262,7 +267,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(521, 192);
+            this.tabPage2.Size = new System.Drawing.Size(471, 190);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "APU";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -353,7 +358,7 @@
             this.tabPage3.Controls.Add(this.comboBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(521, 192);
+            this.tabPage3.Size = new System.Drawing.Size(471, 190);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "GPU";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -518,6 +523,10 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Controls.Add(this.textBox3);
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.comboBox8);
             this.tabPage5.Controls.Add(this.checkBox26);
             this.tabPage5.Controls.Add(this.checkBox25);
             this.tabPage5.Controls.Add(this.checkBox24);
@@ -536,7 +545,7 @@
             this.tabPage5.Controls.Add(this.checkBox13);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(521, 192);
+            this.tabPage5.Size = new System.Drawing.Size(471, 190);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "D3D12";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -544,7 +553,7 @@
             // checkBox26
             // 
             this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(217, 168);
+            this.checkBox26.Location = new System.Drawing.Point(271, 137);
             this.checkBox26.Name = "checkBox26";
             this.checkBox26.Size = new System.Drawing.Size(123, 17);
             this.checkBox26.TabIndex = 49;
@@ -556,7 +565,7 @@
             // checkBox25
             // 
             this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(217, 145);
+            this.checkBox25.Location = new System.Drawing.Point(123, 137);
             this.checkBox25.Name = "checkBox25";
             this.checkBox25.Size = new System.Drawing.Size(130, 17);
             this.checkBox25.TabIndex = 48;
@@ -568,7 +577,7 @@
             // checkBox24
             // 
             this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(217, 125);
+            this.checkBox24.Location = new System.Drawing.Point(217, 51);
             this.checkBox24.Name = "checkBox24";
             this.checkBox24.Size = new System.Drawing.Size(160, 17);
             this.checkBox24.TabIndex = 47;
@@ -580,7 +589,7 @@
             // checkBox23
             // 
             this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(217, 79);
+            this.checkBox23.Location = new System.Drawing.Point(271, 114);
             this.checkBox23.Name = "checkBox23";
             this.checkBox23.Size = new System.Drawing.Size(130, 17);
             this.checkBox23.TabIndex = 46;
@@ -592,7 +601,7 @@
             // checkBox22
             // 
             this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(217, 56);
+            this.checkBox22.Location = new System.Drawing.Point(217, 28);
             this.checkBox22.Name = "checkBox22";
             this.checkBox22.Size = new System.Drawing.Size(175, 17);
             this.checkBox22.TabIndex = 45;
@@ -604,7 +613,7 @@
             // checkBox21
             // 
             this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(217, 33);
+            this.checkBox21.Location = new System.Drawing.Point(271, 91);
             this.checkBox21.Name = "checkBox21";
             this.checkBox21.Size = new System.Drawing.Size(132, 17);
             this.checkBox21.TabIndex = 44;
@@ -616,7 +625,7 @@
             // checkBox20
             // 
             this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(8, 168);
+            this.checkBox20.Location = new System.Drawing.Point(123, 160);
             this.checkBox20.Name = "checkBox20";
             this.checkBox20.Size = new System.Drawing.Size(90, 17);
             this.checkBox20.TabIndex = 43;
@@ -628,7 +637,7 @@
             // checkBox19
             // 
             this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(8, 145);
+            this.checkBox19.Location = new System.Drawing.Point(8, 160);
             this.checkBox19.Name = "checkBox19";
             this.checkBox19.Size = new System.Drawing.Size(58, 17);
             this.checkBox19.TabIndex = 42;
@@ -640,7 +649,7 @@
             // checkBox18
             // 
             this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(8, 99);
+            this.checkBox18.Location = new System.Drawing.Point(8, 114);
             this.checkBox18.Name = "checkBox18";
             this.checkBox18.Size = new System.Drawing.Size(109, 17);
             this.checkBox18.TabIndex = 41;
@@ -652,7 +661,7 @@
             // checkBox17
             // 
             this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(8, 76);
+            this.checkBox17.Location = new System.Drawing.Point(123, 114);
             this.checkBox17.Name = "checkBox17";
             this.checkBox17.Size = new System.Drawing.Size(93, 17);
             this.checkBox17.TabIndex = 40;
@@ -664,7 +673,7 @@
             // checkBox16
             // 
             this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(8, 53);
+            this.checkBox16.Location = new System.Drawing.Point(8, 91);
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(65, 17);
             this.checkBox16.TabIndex = 39;
@@ -676,7 +685,7 @@
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(8, 33);
+            this.checkBox15.Location = new System.Drawing.Point(217, 5);
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(203, 17);
             this.checkBox15.TabIndex = 38;
@@ -704,7 +713,7 @@
             "WARP Software Rendering"});
             this.comboBox7.Location = new System.Drawing.Point(55, 6);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(163, 21);
+            this.comboBox7.Size = new System.Drawing.Size(156, 21);
             this.comboBox7.TabIndex = 37;
             this.comboBox7.MouseLeave += new System.EventHandler(this.global_MouseLeave);
             this.comboBox7.MouseHover += new System.EventHandler(this.global_MouseHover);
@@ -712,7 +721,7 @@
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(217, 102);
+            this.checkBox14.Location = new System.Drawing.Point(8, 137);
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(113, 17);
             this.checkBox14.TabIndex = 35;
@@ -724,7 +733,7 @@
             // checkBox13
             // 
             this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(8, 122);
+            this.checkBox13.Location = new System.Drawing.Point(123, 91);
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(142, 17);
             this.checkBox13.TabIndex = 34;
@@ -744,7 +753,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(521, 192);
+            this.tabPage4.Size = new System.Drawing.Size(471, 190);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "HID";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -817,16 +826,61 @@
             this.pictureBox1.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.d10437ca_81da_48db_a7a0_4c1173ad42e1;
             this.pictureBox1.Location = new System.Drawing.Point(171, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(5, 39);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "Queue priority";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Items.AddRange(new object[] {
+            "normal",
+            "high",
+            "global realtime"});
+            this.comboBox8.Location = new System.Drawing.Point(83, 36);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(128, 21);
+            this.comboBox8.TabIndex = 51;
+            this.comboBox8.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.comboBox8.MouseHover += new System.EventHandler(this.global_MouseHover);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(123, 13);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "Pipeline creation threads";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Location = new System.Drawing.Point(134, 63);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(77, 20);
+            this.textBox3.TabIndex = 53;
+            this.textBox3.MouseLeave += new System.EventHandler(this.global_MouseLeave);
+            this.textBox3.MouseHover += new System.EventHandler(this.global_MouseHover);
             // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 354);
+            this.ClientSize = new System.Drawing.Size(485, 352);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -912,6 +966,10 @@
         private System.Windows.Forms.CheckBox checkBox26;
         private System.Windows.Forms.CheckBox checkBox25;
         private System.Windows.Forms.CheckBox checkBox24;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

@@ -118,6 +118,25 @@ namespace Xenia_Canary_Config_Editor
                 checkBox22.Checked = bool.Parse(d3d12_nvapi_use_driver_heap_priorities[2]);
                 checkBox22.Name = "77";
 
+                string[] d3d12_pipeline_creation_threads = ConfigData[78].Split('\t')[0].Split(' ');
+                textBox3.Text = d3d12_pipeline_creation_threads[2];
+                textBox3.Name = "78";
+
+                string[] d3d12_queue_priority = ConfigData[79].Split('\t')[0].Split(' ');
+                switch (d3d12_queue_priority[2])
+                {
+                    case "0":
+                        comboBox8.SelectedIndex = comboBox8.FindString("normal");
+                        break;
+                    case "1":
+                        comboBox8.SelectedIndex = comboBox8.FindString("high");
+                        break;
+                    case "2":
+                        comboBox8.SelectedIndex = comboBox8.FindString("global realtime");
+                        break;
+                }
+                comboBox8.Name = "79";
+
                 string[] d3d12_readback_memexport = ConfigData[80].Split('\t')[0].Split(' ');
                 checkBox23.Checked = bool.Parse(d3d12_readback_memexport[2]);
                 checkBox23.Name = "80";
@@ -334,6 +353,25 @@ namespace Xenia_Canary_Config_Editor
 
                         string[] d3d12_nvapi_use_driver_heap_priorities = ConfigData[77].Split('#');
                         output = output.Replace(d3d12_nvapi_use_driver_heap_priorities[0].TrimEnd(), "d3d12_nvapi_use_driver_heap_priorities = " + (checkBox22.Checked ? "true" : "false"));
+
+                        string[] d3d12_pipeline_creation_threads = ConfigData[78].Split('#');
+                        output = output.Replace(d3d12_pipeline_creation_threads[0].TrimEnd(), "d3d12_pipeline_creation_threads = " + textBox3.Text);
+
+                        string[] d3d12_queue_priority = ConfigData[79].Split('#');
+                        string d3d12_queue_priority_value = "0";
+                        switch (comboBox8.Text)
+                        {
+                            case "normal":
+                                d3d12_queue_priority_value = "0";
+                                break;
+                            case "high":
+                                d3d12_queue_priority_value = "1";
+                                break;
+                            case "global realtime":
+                                d3d12_queue_priority_value = "2";
+                                break;
+                        }
+                        output = output.Replace(d3d12_queue_priority[0].TrimEnd(), "d3d12_queue_priority = " + d3d12_queue_priority_value);
 
                         string[] d3d12_readback_memexport = ConfigData[80].Split('#');
                         output = output.Replace(d3d12_readback_memexport[0].TrimEnd(), "d3d12_readback_memexport = " + (checkBox23.Checked ? "true" : "false"));
