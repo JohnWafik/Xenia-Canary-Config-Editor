@@ -347,7 +347,7 @@ namespace Xenia_Canary_Config_Editor
                         string[] d3d12_tessellation_wireframe = ConfigData[83].Split('#');
                         output = output.Replace(d3d12_tessellation_wireframe[0].TrimEnd(), "d3d12_tessellation_wireframe = " + (checkBox25.Checked ? "true" : "false"));
 
-                        string[] d3d12_tiled_shared_memory = ConfigData[83].Split('#');
+                        string[] d3d12_tiled_shared_memory = ConfigData[84].Split('#');
                         output = output.Replace(d3d12_tiled_shared_memory[0].TrimEnd(), "d3d12_tiled_shared_memory = " + (checkBox26.Checked ? "true" : "false"));
 
                         string[] fullscreen = ConfigData[88].Split('#');
