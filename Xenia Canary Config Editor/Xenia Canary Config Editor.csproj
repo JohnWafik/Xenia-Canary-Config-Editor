@@ -36,6 +36,15 @@
     <ApplicationIcon>Martz90-Circle-Addon1-Xbox.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DiscUtils.Core, Version=0.16.0.0, Culture=neutral, PublicKeyToken=5fa5b410cc9c6289, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscUtils.Core.0.16.13\lib\net45\DiscUtils.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscUtils.Iso9660, Version=0.16.0.0, Culture=neutral, PublicKeyToken=5fa5b410cc9c6289, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscUtils.Iso9660.0.16.13\lib\net45\DiscUtils.Iso9660.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscUtils.Streams, Version=0.16.0.0, Culture=neutral, PublicKeyToken=5fa5b410cc9c6289, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscUtils.Streams.0.16.13\lib\net45\DiscUtils.Streams.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,6 +88,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
