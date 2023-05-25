@@ -16,7 +16,7 @@ namespace Xenia_Canary_Config_Editor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrom());
+            Application.Run(new MainWindows());
         }
     }
 }

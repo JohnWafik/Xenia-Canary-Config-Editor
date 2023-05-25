@@ -7,7 +7,7 @@
     <ProjectGuid>{D587043E-FCA8-4686-A8B1-5F8F8FC425CC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Xenia_Canary_Config_Editor</RootNamespace>
-    <AssemblyName>Xenia Canary Config Editor</AssemblyName>
+    <AssemblyName>Xenia Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>file_type_config_icon_130673.ico</ApplicationIcon>
+    <ApplicationIcon>Martz90-Circle-Addon1-Xbox.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainFrom.cs">
+    <Compile Include="ConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFrom.Designer.cs">
-      <DependentUpon>MainFrom.cs</DependentUpon>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindows.cs">
       <SubType>Form</SubType>
@@ -63,8 +63,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainFrom.resx">
-      <DependentUpon>MainFrom.cs</DependentUpon>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindows.resx">
       <DependentUpon>MainWindows.cs</DependentUpon>
@@ -94,6 +94,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="file_type_config_icon_130673.ico" />
+    <Content Include="Martz90-Circle-Addon1-Xbox.ico" />
+    <None Include="Resources\Graphicloads-100-Flat-2-Arrow-refresh-4.256.png" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Alert.512.png" />
+    <None Include="Resources\Fa-Team-Fontawesome-FontAwesome-Window-Maximize.512.png" />
+    <None Include="Resources\Grafikartes-Flat-Retro-Modern-Settings.512.png" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Delete-1.512.png" />
+    <None Include="Resources\Martz90-Circle-Addon1-Xbox.512.png" />
+    <None Include="Resources\Cover.png.09c50496e3db996041c1b459a729bb6d.png" />
+    <None Include="Resources\setting.png" />
     <None Include="Resources\game.png" />
     <None Include="Resources\xbox %281%29.png" />
     <None Include="Resources\xbox.png" />

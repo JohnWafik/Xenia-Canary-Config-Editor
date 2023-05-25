@@ -12,11 +12,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Xenia_Canary_Config_Editor
 {
-    public partial class MainFrom : Form
+    public partial class ConfigForm : Form
     {
         string text;
         string[] ConfigData;
-        public MainFrom()
+        public MainWindows mainWindows  { get; set; }
+        public ConfigForm()
         {
             InitializeComponent();
         }
@@ -30,7 +31,12 @@ namespace Xenia_Canary_Config_Editor
         {
             try
             {
-                Text = "Xenia Canary Config Editor v" + System.Windows.Forms.Application.ProductVersion;
+                if (File.Exists("XeniaLauncherConfig.conf"))
+                {
+                    string[] lines = File.ReadAllLines("XeniaLauncherConfig.conf");
+                    //set the titlebar text to the first line of the config file
+                    textBox4.Text = lines[0];
+                }
                 var fileStream = new FileStream("xenia-canary.config.toml", FileMode.Open, FileAccess.Read);
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
@@ -273,7 +279,7 @@ namespace Xenia_Canary_Config_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace + " - " + ex.Message);
+                MessageBox.Show(ex.Message);
                 Close();
             }
         }
@@ -282,6 +288,9 @@ namespace Xenia_Canary_Config_Editor
         {
             try
             {
+                //save the address in textbox4 in the Xenia config file
+                File.WriteAllText("XeniaLauncherConfig.conf", textBox4.Text);
+                mainWindows.LoadingGamesList();
                 using (StreamWriter writer = new StreamWriter("xenia-canary.config.toml", false))
                 {
                     string output = text;
@@ -512,7 +521,18 @@ namespace Xenia_Canary_Config_Editor
             label1.Text = ConfigData[int.Parse(name)].Split('#')[1];
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //open directory dialog
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.Description = "Select the folder where the game is installed.";
+            fbd.RootFolder = Environment.SpecialFolder.MyComputer;
+            fbd.ShowNewFolderButton = false;
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                textBox4.Text = fbd.SelectedPath;
+            }
 
-
+        }
     }
 }
