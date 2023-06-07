@@ -41,6 +41,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -65,7 +67,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.Controls.Add(this.statusStrip1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
@@ -74,6 +76,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 9, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 6, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -136,13 +139,13 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Green;
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 6);
+            this.tableLayoutPanel1.SetColumnSpan(this.label1, 5);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(37, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(952, 30);
+            this.label1.Size = new System.Drawing.Size(916, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "Xenia Launcher";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,10 +168,10 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Custom_Icon_Design_Flatastic_1_Delete_1_512;
-            this.pictureBox2.Location = new System.Drawing.Point(1090, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1086, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(36, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -178,7 +181,7 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Grafikartes_Flat_Retro_Modern_Settings_512;
-            this.pictureBox3.Location = new System.Drawing.Point(1058, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(1054, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -191,7 +194,7 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Custom_Icon_Design_Flatastic_1_Alert_512;
-            this.pictureBox4.Location = new System.Drawing.Point(1026, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(1022, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
@@ -203,7 +206,7 @@
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Graphicloads_100_Flat_2_Arrow_refresh_4_256;
-            this.pictureBox5.Location = new System.Drawing.Point(994, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(990, 2);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 30);
@@ -211,6 +214,19 @@
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.icons8_maximize_96;
+            this.pictureBox6.Location = new System.Drawing.Point(958, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // MainWindows
             // 
@@ -234,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,5 +268,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

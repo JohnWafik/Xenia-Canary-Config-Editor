@@ -143,6 +143,16 @@ namespace Xenia_Canary_Config_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximize_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-maximize-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Martz90_Circle_Addon1_Xbox_512 {
             get {
                 object obj = ResourceManager.GetObject("Martz90-Circle-Addon1-Xbox.512", resourceCulture);

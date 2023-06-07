@@ -138,16 +138,26 @@ namespace Xenia_Canary_Config_Editor
                     ListViewItem item = new ListViewItem();
                     item.Text = Path.GetFileName(file);
                     item.ToolTipText = file;
-                    item.ImageIndex = 0;
                     //byte[] test = new byte[10];
                     //using (BinaryReader reader = new BinaryReader(new FileStream(file, FileMode.Open)))
                     //{
                     //    reader.BaseStream.Seek(50, SeekOrigin.Begin);
                     //    reader.Read(test, 0, 10);
                     //}
+                    //get image from file and add it to image list
+                    try
+                    {
+                        Image img = Image.FromFile(file.Replace(".iso", ".jpg"));
+                        imageList1.Images.Add(img);
+                        item.ImageIndex = imageList1.Images.Count - 1;
+                    }catch(Exception ex)
+                    {
+                        item.ImageIndex = 0;
+                    }
+
                     Console.WriteLine("--------------File------------------------");
                     Console.WriteLine(file);
-                    Console.WriteLine("--------------Data------------------------");
+                    Console.WriteLine("--------------Image------------------------");
                     //foreach (byte b in test)
                     //{
                     //    Console.Write(b);
@@ -156,20 +166,6 @@ namespace Xenia_Canary_Config_Editor
 
 
                     // ...
-
-                    IntPtr iso = iso9660_open(file, ISO9660_LIBCDIO_OPEN_READ);
-                    IntPtr pvd = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(iso9660_pvd_t)));
-                    bool success = iso9660_ifs_read_pvd(iso, pvd);
-
-                    if (success)
-                    {
-                        iso9660_pvd_t pvdData = (iso9660_pvd_t)Marshal.PtrToStructure(pvd, typeof(iso9660_pvd_t));
-                        // Do something with the PVD data...
-                        Console.WriteLine(pvdData.volume_id);
-                    }
-
-                    Marshal.FreeHGlobal(pvd);
-                    iso9660_close(iso);
 
                     listView1.Items.Add(item);
                 }
@@ -216,7 +212,6 @@ namespace Xenia_Canary_Config_Editor
 
         private void label1_DoubleClick(object sender, EventArgs e)
         {
-            Console.WriteLine("Double Clicked");
             //toggle formstate from maximized to normal
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -256,6 +251,19 @@ namespace Xenia_Canary_Config_Editor
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             LoadingGamesList();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            //toggle formstate from normal to maximized
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }
