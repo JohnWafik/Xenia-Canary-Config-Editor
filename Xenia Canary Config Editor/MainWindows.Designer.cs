@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Controls.Add(this.statusStrip1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
@@ -145,7 +145,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(37, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(916, 30);
+            this.label1.Size = new System.Drawing.Size(914, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "Xenia Launcher";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,10 +168,10 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Custom_Icon_Design_Flatastic_1_Delete_1_512;
-            this.pictureBox2.Location = new System.Drawing.Point(1086, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1084, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -181,7 +181,7 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Grafikartes_Flat_Retro_Modern_Settings_512;
-            this.pictureBox3.Location = new System.Drawing.Point(1054, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(1052, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -194,19 +194,20 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Custom_Icon_Design_Flatastic_1_Alert_512;
-            this.pictureBox4.Location = new System.Drawing.Point(1022, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(1020, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.Graphicloads_100_Flat_2_Arrow_refresh_4_256;
-            this.pictureBox5.Location = new System.Drawing.Point(990, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(988, 2);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 30);
@@ -219,7 +220,7 @@
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = global::Xenia_Canary_Config_Editor.Properties.Resources.icons8_maximize_96;
-            this.pictureBox6.Location = new System.Drawing.Point(958, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(956, 2);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 30);
