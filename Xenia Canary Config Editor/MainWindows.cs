@@ -46,27 +46,33 @@ namespace Xenia_Canary_Config_Editor
                 romsDir = "C:\\Users\\" + Environment.UserName + "\\Documents\\";
                 File.WriteAllText("XeniaLauncherConfig.conf", romsDir);
             }
-            Console.WriteLine(romsDir);
-            string[] filePaths = Directory.GetFiles(romsDir);
-            foreach (string file in filePaths)
+            //check if the directory exists
+            if (Directory.Exists(romsDir))
             {
-                if (file.Contains(".iso"))
+                string[] filePaths = Directory.GetFiles(romsDir);
+                foreach (string file in filePaths)
                 {
-                    ListViewItem item = new ListViewItem();
-                    item.Text = Path.GetFileName(file);
-                    item.ToolTipText = file;
-                    try
+                    if (file.Contains(".iso"))
                     {
-                        Image img = Image.FromFile(file.Replace(".iso", ".jpg"));
-                        imageList1.Images.Add(img);
-                        item.ImageIndex = imageList1.Images.Count - 1;
-                    }catch(Exception ex)
-                    {
-                        item.ImageIndex = 0;
+                        ListViewItem item = new ListViewItem();
+                        item.Text = Path.GetFileName(file);
+                        item.ToolTipText = file;
+                        try
+                        {
+                            Image img = Image.FromFile(file.Replace(".iso", ".jpg"));
+                            imageList1.Images.Add(img);
+                            item.ImageIndex = imageList1.Images.Count - 1;
+                        }
+                        catch (Exception ex)
+                        {
+                            item.ImageIndex = 0;
+                        }
+                        listView1.Items.Add(item);
                     }
-                    listView1.Items.Add(item);
                 }
             }
+
+
 
         }
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)

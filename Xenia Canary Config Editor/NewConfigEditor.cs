@@ -81,6 +81,7 @@ namespace Xenia_Canary_Config_Editor
             {
                 if (treeView1.SelectedNode != null)
                 {
+                    label2.Text = treeView1.SelectedNode.Text;
                     textBox1.Text = values[int.Parse(treeView1.SelectedNode.Name)];
                 }
             }
@@ -116,7 +117,7 @@ namespace Xenia_Canary_Config_Editor
                 }
                 else
                 {
-                    MessageBox.Show("xenia-canary.config.toml not found!");
+                    MessageBox.Show("xenia-canary.config.toml not found!","Error Message!",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             else
@@ -200,6 +201,19 @@ namespace Xenia_Canary_Config_Editor
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             searchintreeviewchildnodes();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if clicked on a button in the datagridview cell show message box
+            if (e.ColumnIndex == 3)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this row?", "Delete Row", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    dataGridView1.Rows.RemoveAt(e.RowIndex);
+                }
+            }
         }
     }
 }
